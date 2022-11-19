@@ -15,6 +15,7 @@ declare module "next-auth" {
       profile_img: string
       usertype: string
       payment_status: string
+      image: string
     }
   }
 }
