@@ -27,6 +27,9 @@ function ResetPassword() {
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
   const [message2, setMessage2] = useState("");
+  const boxOne = useRef<HTMLInputElement>(null);
+  const boxTwo = useRef<HTMLInputElement>(null);
+  const boxThree = useRef<HTMLInputElement>(null);
 
   // Check if code already exist for use with current ID and get user credentials if exist
   const getEmailCredentials = () => {
@@ -51,11 +54,11 @@ function ResetPassword() {
     switch (num) {
       case 1:
         setOne(e.target.value);
-        e.currentTarget.nextElementSibling?.focus();
+        boxTwo.current?.focus();
         break;
       case 2:
         setTwo(e.target.value);
-        e.currentTarget.nextElementSibling!.focus();
+        boxThree.current?.focus();
         break;
       case 3:
         setThree(e.target.value);
@@ -213,6 +216,7 @@ function ResetPassword() {
             value={one}
             onChange={(e) => setCode(e, 1)}
             onFocus={() => setOne("")}
+            ref={boxOne}
           />
           <input
             type="text"
@@ -221,6 +225,7 @@ function ResetPassword() {
             value={two}
             onChange={(e) => setCode(e, 2)}
             onFocus={() => setTwo("")}
+            ref={boxTwo}
           />
           <input
             type="text"
@@ -229,6 +234,7 @@ function ResetPassword() {
             value={three}
             onChange={(e) => setCode(e, 3)}
             onFocus={() => setThree("")}
+            ref={boxThree}
           />
           <input
             type="text"
