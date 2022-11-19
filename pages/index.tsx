@@ -22,11 +22,11 @@ export default function Page() {
                 I am looking for a woman
               </button>
             </Link>
-            <a href="/signin">
+            <Link href="/signin">
               <button className="w-full md:w-1/2 md:block md:mx-auto bg-accent border-2 border-accent text-white py-2 px-4 rounded-2xl mt-4 cursor-pointer">
                 I am looking for a man
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
