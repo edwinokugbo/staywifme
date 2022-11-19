@@ -1,0 +1,513 @@
+GET  http://localhost:50000/
+
+###
+
+GET  http://localhost:50000/usersp
+
+###
+
+GET  http://localhost:3000/api/uploads/test
+
+###
+
+POST  http://localhost:50000/filter-users
+Content-Type: application/json
+
+{
+    "usertype": 2
+}
+
+###
+
+GET  http://localhost:50000/users/all
+Content-Type: application/json
+
+{
+    "searchkey": "Maduako"
+}
+
+###
+
+GET  http://localhost:50000/user/61f5682f38bfce6ec360623d
+###
+
+GET  http://localhost:50000/user/single/eokugbo@gmail.com
+
+###
+
+POST http://localhost:50000/user
+Content-Type: application/json
+
+{
+    "firstname": "Daniel",
+    "middlename": "",
+    "lastname": "Okugbo",
+    "email": "dangbo0@gmail.com",
+    "phone": "09097558551",
+    "address": "8 Ogunseye Street",
+    "city": "Akute",
+    "state": "Ogun",
+    "country": "Nigeria",
+    "password": "1234567890"
+}
+
+###
+
+POST http://decapapi.sandbox.com.ng/user
+Content-Type: application/json
+
+{
+    "firstname": "Mebele",
+    "lastname": "Okugbo",
+    "email": "eokugbo@gmail.com",
+    "phone": "09097558551",
+    "password": ""
+}
+
+###
+
+PATCH http://localhost:50000/user
+Content-Type: application/json
+
+{
+    "id": "61e91755633f7ef5ae8f3679",
+    "firstname": "Onella",
+    "middlename": "Isioma",
+    "lastname": "Okugbo",
+    "nickname": "nella",
+    "usertype": "2",
+    "status": ""
+}
+
+###
+
+DELETE http://localhost:50000/user/61f1a8e3b7bdb489e82ba232
+
+###
+
+GET  http://localhost:50000/email/confirm-email
+Content-Type: application/json
+
+{
+    "email": "eokugbo@gmail.com"
+}
+
+###
+
+POST  http://localhost:3000/api/backend/auth/
+Content-Type: application/json
+
+{
+    "credentials": { "csrfToken": "19928283993939393", "username": "edwinokugbo@gmail.com", "password": "1111111111" }
+}
+
+###
+
+POST  http://api.decapitalistshow.com:50000/auth/signin
+Content-Type: application/json
+
+{
+    "credentials": { "csrfToken": "19928283993939393", "username": "edwinokugbo@gmail.com", "password": "1111111111" }
+}
+
+###
+
+GET  http://localhost:50000/util/check-reset-code/keZLbQhr5QX4G5tzdMc6pyEtglvoYEe9ZGjmBALbdLVikBgIq4bCduDguwJaQaTaDBKiJ7
+Content-Type: application/json
+
+###
+
+POST http://localhost:50000/util/request-password-change
+Content-Type: application/json
+
+{
+    "email": "eokugbo@gmail.com"
+}
+
+###
+
+PATCH http://localhost:50000/util/reset-password-now
+Content-Type: application/json
+
+{
+    "id": "61f5682f38bfce6ec360623d",
+    "email": "eokugbo@gmail.com",
+    "password": "123456788"
+}
+
+###
+
+GET http://localhost:50000/posts
+
+###
+
+POST http://localhost:50000/post
+Content-Type: application/json
+
+{
+    "title": "E. K. Clarke Demands the PDP Zone The Presidency to the South",
+    "subtitle": "This is goind to be very interesting", 
+    "category": "Politics",
+    "content": "I am realy going to love doing this for sometime",
+    "author": "61f1a625b7bdb489e82ba20b"
+}
+
+###
+
+GET http://localhost:50000/post/61fc00801d233d6e826cc0bb
+
+###
+
+GET http://localhost:50000/searchposts
+Content-Type: application/json
+
+{
+    "searchkey": "Tinubu"
+}
+
+###
+
+PATCH http://localhost:50000/post
+Content-Type: application/json
+
+{
+    "id": "61fc00801d233d6e826cc0bb",
+    "title": "Government pulls down the scam rice pyramids",
+    "subtitle": "The poeple can easily see it was a fraud!", 
+    "category": "Politics",
+    "content": "How can they talk about a rice pyramid when the price of rice is still very high in the market",
+    "author": "61e8a0ebf29094a9a438fdc1"
+}
+
+###
+
+DELETE http://localhost:50000/post/61fbff7c1d233d6e826cc0b7
+
+###
+
+POST http://localhost:50000/get-verify
+Content-Type: application/json
+
+{
+    "id": "61f5682f38bfce6ec360623d1111"
+}
+
+###
+
+GET http://localhost:50000/post-test
+
+###
+
+GET http://localhost:50000/categories
+
+###
+
+POST http://localhost:50000/category
+Content-Type: application/json
+
+{
+    "name": "Technology"
+}
+
+###
+
+GET http://localhost:50000/products
+
+###
+
+GET http://localhost:50000/product/6200fe6af0ba25bcb06386ad
+
+###
+
+POST http://localhost:50000/product
+Content-Type: application/json
+
+{
+    "name": "Sleek Apple Laptop",
+    "description": "A full featured, high performance Aple laptop for quick give away",
+    "quantity": 4,
+    "price": 250000,
+    "oldPrice": 520000.00,
+    "reorderLevel": 0    
+}
+
+###
+
+PATCH http://localhost:50000/product
+Content-Type: application/json
+
+{
+    "id": "6200fe6af0ba25bcb06386ad",
+    "name": "Classy Blue Shirt",
+    "description": "This is a very classy shirt for men at a give away price",
+    "quantity": 35,
+    "price": 6250.00,
+    "oldPrice": 9400.00,
+    "reorderLevel": 12
+}
+
+###
+
+DELETE http://localhost:50000/product
+Content-Type: application/json
+
+{
+    "id": "620101b3f4e0a0f16615baba"
+}
+
+###
+
+GET http://localhost:50000/search-products
+Content-Type: application/json
+
+{
+    "key": "Apple"
+}
+
+###
+
+GET http://localhost:50000/product-categories
+
+###
+
+GET http://localhost:50000/product-category/620112dd6264af80e8a5d734
+
+###
+
+POST http://localhost:50000/product-category
+Content-Type: application/json
+
+{
+    "name": "Sports",
+    "description": "Sports products"
+}
+
+###
+
+PATCH http://localhost:50000/product-category
+Content-Type: application/json
+
+{
+    "id": "620112dd6264af80e8a5d734",
+    "name": "Sports",
+    "description": "Great Sports Items"
+}
+
+###
+
+DELETE http://localhost:50000/product-category
+Content-Type: application/json
+
+{
+    "id": "620113446264af80e8a5d73c"
+}
+
+###
+
+GET http://localhost:50000/search-product-categories
+Content-Type: application/json
+
+{
+    "key": "Sports"
+}
+
+# Polls Routes
+
+###
+
+GET http://localhost:50000/polls
+
+###
+
+GET http://localhost:50000/polls-n-options
+
+###
+
+GET http://localhost:50000/poll/6202e537334e24353cae45f6
+
+###
+
+POST http://localhost:50000/poll
+Content-Type: application/json
+
+{
+    "description": "A quick sample poll of who you think should Nigeria's next President"
+}
+
+###
+
+PATCH http://localhost:50000/poll
+Content-Type: application/json
+
+{
+    "id": "62011c975e308842db827a01",
+    "description": "Vote to evict or retain your favorite team for week 5"
+}
+
+###
+
+DELETE http://localhost:50000/poll
+Content-Type: application/json
+
+{
+    "id": "62011db4576ac50ecf165a28"
+}
+
+###
+
+GET http://localhost:50000/search-polls
+Content-Type: application/json
+
+{
+    "key": "evicted"
+}
+
+###
+
+GET http://localhost:50000/poll-options/?pollid=6202e537334e24353cae45f6
+
+###
+
+POST http://localhost:50000/poll-option
+Content-Type: application/json
+
+{
+    "pollid": "6201a2ee7ae28862ed431851",
+    "description": "This is poll option 2",
+    "isAnswer": "Y"
+}
+
+###
+
+PATCH http://localhost:50000/poll-option
+Content-Type: application/json
+
+{
+    "id": "62024a537f43d89aa11ce2b9",
+    "pollid": "6201a2ee7ae28862ed431851",
+    "description": "This is poll option 3",
+    "isAnswer": "Y"
+}
+
+###
+
+DELETE http://localhost:50000/poll-option
+Content-Type: application/json
+
+{
+    "id": "62024c34c2ccc14d11fc2159"
+}
+
+###
+
+GET http://localhost:50000/search-poll-options
+Content-Type: application/json
+
+{
+    "key": "option 3"
+}
+
+# Media Routes
+
+###
+
+GET http://localhost:50000/all-media
+
+###
+
+GET http://localhost:50000/media/6214ccfb3974ad0f5869fedb
+
+###
+
+POST http://localhost:50000/media
+Content-Type: application/json
+
+{
+    "title": "Yahoo Social Website url",
+    "url": "https://yahoo.com"
+}
+
+###
+
+PATCH http://localhost:50000/media
+Content-Type: application/json
+
+{
+    "id": "6214ccfb3974ad0f5869fedb",
+    "title": "Yahoo Social Website url",
+    "url": "https://yahoo.com"
+}
+
+###
+
+DELETE http://localhost:50000/media
+Content-Type: application/json
+
+{
+    "id": "6214cda53974ad0f5869fee1"
+}
+
+###
+
+GET http://localhost:50000/search-media
+Content-Type: application/json
+
+{
+    "key": "social"
+}
+
+# Vote Routes
+
+###
+
+GET http://localhost:50000/votes
+Content-Type: application/json
+
+{
+    "pollid": "6202e537334e24353cae45f6"
+}
+
+###
+
+GET http://localhost:50000/vote/6214ccfb3974ad0f5869fedb
+
+###
+
+POST http://localhost:50000/vote
+Content-Type: application/json
+
+{
+    "pollid": "6203927083da9324040e6a50",
+    "choiceid": "6202ebb0f0707eb185b25d87",
+    "voterid": "61f1a625b7bdb489e82ba20b"
+}
+
+###
+
+PATCH http://localhost:50000/vote
+Content-Type: application/json
+
+{
+    "id": "6214d176a2c959a44524bdd7",
+    "pollid": "6202e537334e24353cae45f6",
+    "choiceid": "6202f0aa6192e6c80ea266f2",
+    "voterid": "61f1a625b7bdb489e82ba20b"
+}
+
+###
+
+DELETE http://localhost:50000/vote
+Content-Type: application/json
+
+{
+    "id": "6214d187a2c959a44524bdda"
+}
+
+###
+
+GET http://localhost:50000/search-votes
+Content-Type: application/json
+
+{
+    "key": "6202ebb0f0707eb185b25d87"
+}

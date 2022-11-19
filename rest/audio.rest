@@ -1,0 +1,34 @@
+
+GET  http://localhost:3000/api/backend/audio/audios
+
+###
+
+GET  http://localhost:3000/api/backend/audio/636123e962ab3016681727bb
+###
+
+GET  http://localhost:3000/api/backend/audio/audio/
+Content-Type: application/json
+
+{
+    "aid": "636123e962ab3016681727bb"
+}
+
+###
+
+PATCH  http://localhost:3000/api/backend/audio/audio/
+Content-Type: application/json
+
+{
+    "firstname": "Daniel",
+    "middlename": "",
+    "lastname": "Okugbo",
+    "email": "dangbo0@gmail.com",
+    "phone": "09097558551",
+    "address": "8 Ogunseye Street",
+    "city": "Akute",
+    "state": "Ogun",
+    "country": "Nigeria",
+    "password": "1234567890"
+}
+
+###

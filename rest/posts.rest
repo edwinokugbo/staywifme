@@ -1,0 +1,35 @@
+
+GET  http://localhost:3000/api/backend/blog/posts
+
+###
+
+GET  http://localhost:3000/api/backend/post/61fc00801d233d6e826cc0bb
+
+###
+
+GET  http://localhost:3000/api/backend/post/post/
+Content-Type: application/json
+
+{
+    "pid": "61fc00801d233d6e826cc0bb"
+}
+
+###
+
+PATCH  http://localhost:3000/api/backend/post/post/
+Content-Type: application/json
+
+{
+    "firstname": "Daniel",
+    "middlename": "",
+    "lastname": "Okugbo",
+    "email": "dangbo0@gmail.com",
+    "phone": "09097558551",
+    "address": "8 Ogunseye Street",
+    "city": "Akute",
+    "state": "Ogun",
+    "country": "Nigeria",
+    "password": "1234567890"
+}
+
+###

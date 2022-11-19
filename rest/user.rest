@@ -1,0 +1,50 @@
+
+GET  http://localhost:3000/api/backend/user/users
+
+###
+
+GET  http://localhost:3000/api/backend/user/636123e962ab3016681727bb
+###
+
+GET  http://localhost:3000/api/backend/user/user/
+Content-Type: application/json
+
+{
+    "id": "61f1a625b7bdb489e82ba20b"
+}
+
+###
+
+PATCH  http://localhost:3000/api/backend/user/user/
+Content-Type: application/json
+
+{
+    "firstname": "Daniel",
+    "middlename": "",
+    "lastname": "Okugbo",
+    "email": "dangbo0@gmail.com",
+    "phone": "09097558551",
+    "address": "8 Ogunseye Street",
+    "city": "Akute",
+    "state": "Ogun",
+    "country": "Nigeria",
+    "password": "1234567890"
+}
+
+###
+
+DELETE  http://localhost:3000/api/backend/user/user/
+Content-Type: application/json
+
+{
+    "id": "6362fad9d40ace924d24fda8"
+}
+
+###
+
+GET  http://localhost:3000/api/frontend/reg/check_subscription_status/
+Content-Type: application/json
+
+{
+    "uid": "6362fad9d40ace924d24fda8"
+}
