@@ -51,7 +51,7 @@ function ResetPassword() {
     switch (num) {
       case 1:
         setOne(e.target.value);
-        e.currentTarget.nextElementSibling!.focus();
+        e.currentTarget.nextElementSibling?.focus();
         break;
       case 2:
         setTwo(e.target.value);
