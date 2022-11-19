@@ -71,7 +71,11 @@ function Search() {
               className="w-full mt-2 p-2 border-2 border-slate-200"
             >
               {age_range.map((age) => {
-                return <option value={age}>{age}</option>;
+                return (
+                  <option value={age} key={age}>
+                    {age}
+                  </option>
+                );
               })}
             </select>
             <select
@@ -79,7 +83,11 @@ function Search() {
               className="w-full mt-2 p-2 border-2 border-slate-200"
             >
               {age_range.map((age) => {
-                return <option value={age}>{age}</option>;
+                return (
+                  <option value={age} key={age}>
+                    {age}
+                  </option>
+                );
               })}
             </select>
           </div>

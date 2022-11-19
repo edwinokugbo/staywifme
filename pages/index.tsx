@@ -1,8 +1,8 @@
-
-import type { ReactElement } from 'react'
-import Layout from '../components/layout'
+import Link from "next/link";
+import type { ReactElement } from "react";
+import Layout from "../components/layout";
 // import NestedLayout from '../components/nested-layout'
-import type { NextPageWithLayout } from './_app'
+import type { NextPageWithLayout } from "./_app";
 
 export default function Page() {
   return (
@@ -17,11 +17,11 @@ export default function Page() {
             Find the love of your life?
           </h2>
           <div className="my-4">
-            <a href="/signin">
+            <Link href="/signin">
               <button className="w-full md:w-1/2 md:block md:mx-auto bg-accent border-2 border-accent text-white py-2 px-4 rounded-2xl mt-4 cursor-pointer font-effect-fire">
                 I am looking for a woman
               </button>
-            </a>
+            </Link>
             <a href="/signin">
               <button className="w-full md:w-1/2 md:block md:mx-auto bg-accent border-2 border-accent text-white py-2 px-4 rounded-2xl mt-4 cursor-pointer">
                 I am looking for a man

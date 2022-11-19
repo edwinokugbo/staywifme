@@ -3,7 +3,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import Main from "../../components/dashboard/Main";
 
-function pageid() {
+function Pageid() {
   const { data: session } = useSession();
   const router = useRouter();
   const pageid = router.query.pageid;
@@ -15,4 +15,4 @@ function pageid() {
   );
 }
 
-export default pageid;
+export default Pageid;

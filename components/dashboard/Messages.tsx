@@ -34,7 +34,10 @@ function Messages() {
           <h2 className="text-xl font-bold mb-2">Messages</h2>
           {messages.map((messg) => {
             return (
-              <div className="w-full border-[1px] border-slate-200 py-4 px-2 text-slate-700">
+              <div
+                className="w-full border-[1px] border-slate-200 py-4 px-2 text-slate-700"
+                key={messg.email}
+              >
                 <p className="font-bold">{messg.email}</p>
                 <p>{messg.name}</p>
               </div>
