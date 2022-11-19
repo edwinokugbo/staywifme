@@ -30,6 +30,9 @@ function ResetPassword() {
   const boxOne = useRef<HTMLInputElement>(null);
   const boxTwo = useRef<HTMLInputElement>(null);
   const boxThree = useRef<HTMLInputElement>(null);
+  const boxFour = useRef<HTMLInputElement>(null);
+  const boxFive = useRef<HTMLInputElement>(null);
+  const boxSix = useRef<HTMLInputElement>(null);
 
   // Check if code already exist for use with current ID and get user credentials if exist
   const getEmailCredentials = () => {
@@ -62,15 +65,15 @@ function ResetPassword() {
         break;
       case 3:
         setThree(e.target.value);
-        e.currentTarget.nextElementSibling!.focus();
+        boxFour.current?.focus();
         break;
       case 4:
         setFour(e.target.value);
-        e.currentTarget.nextElementSibling!.focus();
+        boxFive.current?.focus();
         break;
       case 5:
         setFive(e.target.value);
-        e.currentTarget.nextElementSibling!.focus();
+        boxSix.current?.focus();
         break;
       case 6:
         setSix(e.target.value);
@@ -243,6 +246,7 @@ function ResetPassword() {
             value={four}
             onChange={(e) => setCode(e, 4)}
             onFocus={() => setFour("")}
+            ref={boxFour}
           />
           <input
             type="text"
@@ -251,6 +255,7 @@ function ResetPassword() {
             value={five}
             onChange={(e) => setCode(e, 5)}
             onFocus={() => setFive("")}
+            ref={boxFive}
           />
           <input
             type="text"
@@ -259,6 +264,7 @@ function ResetPassword() {
             value={six}
             onChange={(e) => setCode(e, 6)}
             onFocus={() => setSix("")}
+            ref={boxSix}
           />
         </div>
         <div className="w-full pb-4 flex justify-between items-center">
