@@ -32,8 +32,8 @@ export default NextAuth({
           }
         );
         const res = response.data;
+        console.log(res);
         if (res.status === "success") {
-          // console.log(res);
           return res.user;
         } else {
           // console.log(res);
