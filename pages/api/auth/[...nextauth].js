@@ -24,6 +24,7 @@ export default NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
+        console.log(credentials);
         // Add logic here to look up the user from the credentials supplied
         const response = await axios.post(
           Settings.API_DATA_URL + "user/signin",
