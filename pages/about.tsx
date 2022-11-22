@@ -1,21 +1,4 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
-import { Settings } from "../constants/Settings";
-
 export default function About() {
-  const [user, setUser] = useState();
-
-  useEffect(() => {
-    axios
-      .get(`${Settings.API_DATA_URL}user/users`)
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
   return (
     <div className="w-full min-h-screen bg-greyish">
       <div className="w-full md:w-[50%] mx-auto p-4 border-2 border-slate-200">
